@@ -1,0 +1,165 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-item {
+  background-color: white;
+  transition: background-color 0.1s ease-out;
+}
+
+.contact-item:active {
+  background-color: var(--dark-grey);
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  box-shadow: inset 0px 0px 0px 2px white;
+}
+
+.contact-item-text {
+  color: black;
+  transition: color 0.2s linear;
+}
+
+.contact-item-text:active {
+  color: white
+}
+
+@media (hover: hover) {
+  .contact-item:hover {
+    background-color: var(--dark-grey);
+    -webkit-box-shadow: inset 0px 0px 0px 2px white;
+    -moz-box-shadow: inset 0px 0px 0px 2px white;
+    box-shadow: inset 0px 0px 0px 2px white;
+  }
+  .contact-item-text:hover {
+    color: white
+  }
+}
+
+.contact-or-seperator {
+  margin: var(--margin) 0 var(--margin) 0
+}
+
+.cv-download-btn {
+  background-color: white;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease-out;
+  bottom: var(--margin);
+  right: var(--margin);
+  padding: 6px 10px 3px 10px;
+  text-decoration: none!important;
+}
+
+.cv-download-txt, .cv-download-btn-download-txt:link {
+  color: black;
+  text-decoration: none!important;
+  outline: none;
+}
+
+@media (hover: hover) {
+  .cv-download-btn:hover {
+    background-color: var(--dark-grey);
+    -webkit-box-shadow: inset 0px 0px 0px 2px white;
+    -moz-box-shadow: inset 0px 0px 0px 2px white;
+    box-shadow: inset 0px 0px 0px 2px white;
+  }
+  .cv-download-txt:hover {
+    color: white
+  }
+}
+
+.contact-form {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: calc(var(--margin) /2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-form-submitted {
+  height: 100%;
+  width: 100%;
+  background-color: var(--green);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-submitted.red {
+  background-color: var(--red);
+}
+
+.contact-form input, .contact-form div {
+  margin-bottom: calc(var(--margin)/2);
+}
+
+input {
+  width: 100%;
+}
+
+input, textarea {
+  background-color: var(--dark-grey);
+  border-radius: calc(var(--border-radius) - calc(var(--margin)/2));
+  padding: 6px 10px 3px 10px;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.8;
+  border: none;
+  color: white
+}
+
+textarea {
+  resize: none;
+  margin: 0px;
+  height: 100%;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.form-txt-area {
+  overflow: hidden;
+  border-radius: calc(var(--border-radius) - calc(var(--margin)/2));
+  background-color: red;
+  height: 150px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 117, 117);
+  outline: 1px solid slategrey;
+}
+
+.contact-form-btn {
+  font-size: 1rem;
+  align-self: center;
+  padding: 6px 10px 3px 10px;
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+}
+
+.contact-form-error-msg-container {
+  align-self: center;
+}
+
+.contact-form-error-msg {
+  color: var(--red);
+  align-self: center;
+}
+
+@media (hover: hover) {
+  .contact-form-btn:hover {
+    background-color: var(--dark-grey);
+    color: white
+  }
+}

@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  src: url('../../fonts/JosefinSansRegular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  src: url('../../fonts/JosefinSansBold.ttf') format("truetype");
+}
+
+.pdf-wrapper {
+  /* flex: 1 1 auto; */
+  display: grid;
+  grid-template-areas: "header-info contact" "experiences metrics";
+  grid-template-rows: 100px auto;
+  grid-template-columns: auto 25%;
+  gap: calc(var(--margin)/2) calc(var(--margin)/2);
+  background-color: var(--red);
+  padding: calc(var(--margin)/2);
+  font-family: 'Josefin Sans';
+  height: 841px;
+  width: 595px;
+  border: solid white 1px;
+}
+
+/* ADJUSTMENTS */
+
+.pdf-wrapper h1 {
+  font-size: 30px;
+}
+
+.pdf-wrapper h2 {
+  font-size: 24px;
+}
+
+.pdf-wrapper h3 {
+  font-size: px;
+}
+
+.pdf-wrapper p {
+  font-size: 10px;
+}
+
+.pdf-wrapper .list:not(:last-child) {
+  margin-top: calc(var(--margin)/2);
+  margin-bottom: calc(var(--margin)/2);
+}
+
+.pdf-wrapper .list-item {
+  padding: 3px 5px 1px 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+}
+
+/* END */
+
+.pdf-header-info {
+  max-width: 300px;
+  grid-area: 'header-info';
+  background-color: blue;
+  display: flex;
+  align-items: center;
+}
+
+.pdf-header-info img {
+  height: 100px;
+  width: calc(100px * 500/620);
+  margin-right: calc(var(--margin)/2);
+  border-radius: calc(var(--border-radius)/2);
+}
+
+.pdf-header-info.name-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-contact {
+  grid-area: 'contact';
+  background-color: green;
+  text-align: end;
+  align-self: center;
+}
+
+.pdf-contact>p {
+  margin: 5px 0px
+}
+
+.pdf-experiences {
+  background-color: pink;
+  grid-area: 'experiences';
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pdf-metrics {
+  background-color: orange;
+  grid-area: 'metrics';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
