@@ -119,21 +119,21 @@ const App: React.FC<Props> = () => {
 
       <Dropdown
         title="📚 Formal Education"
-        content={<></>}
+        content={<p>comming soon...</p>}
         {...{ openDropdown }}
         {...{ setOpenDropdown }}
       />
       <Spacer height={margin} />
       <Dropdown
         title="👨🏼‍💻 Work Experience"
-        content={<></>}
+        content={<p>comming soon...</p>}
         {...{ openDropdown }}
         {...{ setOpenDropdown }}
       />
       <Spacer height={margin} />
       <Dropdown
         title="🧪 Projects"
-        content={<></>}
+        content={<p>comming soon...</p>}
         {...{ openDropdown }}
         {...{ setOpenDropdown }}
       />
