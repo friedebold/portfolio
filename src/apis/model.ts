@@ -29,8 +29,8 @@ export interface Interest {
 
 export interface Experience {
   id: number;
-  start: string;
-  end: string | "today";
+  start: /* { seconds: number; nanoseconds: number } | */ Time;
+  end: /* { seconds: number; nanoseconds: number } | */ Time;
   company: string;
   position: string;
   desc: string[];
@@ -48,20 +48,17 @@ export interface Seperator {
   title: string;
 }
 
+export interface Time {
+  year: number;
+  month: number;
+}
+
 export interface Dimensions {
   height: number;
   width: number;
 }
 
 export type Device = "small" | "medium";
-
-export const margin = 30;
-export const borderRadius = 25;
-
-export const colors = {
-  red: "#ff443a",
-  green: "#0CCE6B",
-};
 
 export interface ClientLocation {
   country: string;

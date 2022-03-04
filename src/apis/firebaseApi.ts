@@ -1,6 +1,12 @@
 import { initializeApp } from "firebase/app";
 import "firebase/firestore";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDocs,
+  getFirestore,
+  setDoc
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA7ZtxzONuN2ZbVnV5rjn1DtcEBrb7aHOM",
@@ -27,7 +33,7 @@ export const fetchData = async () => {
   return profileData;
 };
 
-/* export const addToDB = async (place: string, data: any) => {
+export const addToDB = async (place: string, data: any) => {
   const docRef = doc(db, "profileData", place);
 
   await setDoc(docRef, {
@@ -35,4 +41,4 @@ export const fetchData = async () => {
   });
 
   console.log("setDoc...");
-}; */
+};

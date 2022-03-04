@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { ContactPoint } from "../../apis/model";
-import "./contact.css";
 
 interface Props {
   contact: ContactPoint;
-  /*   setViewedPage: React.Dispatch<SetStateAction<string>> */
 }
 
-const ContactItem: React.FC<Props> = ({ contact /* , setViewedPage */ }) => {
+const ContactItem: React.FC<Props> = ({ contact }) => {
   const [savedToClipboard, setSavedToClipboard] = useState(false);
 
   useEffect(() => {
@@ -21,14 +19,13 @@ const ContactItem: React.FC<Props> = ({ contact /* , setViewedPage */ }) => {
   const saveToClipboard = () => {
     navigator.clipboard.writeText(contact.title);
     setSavedToClipboard(true);
-    /*   setViewedPage(contact.title) */
   };
 
   if (contact.href) {
     return (
       <a
         className="list-item"
-        /* onClick={() => setViewedPage(contact.title)} */ style={{
+        style={{
           textDecoration: "none",
         }}
         target="none"

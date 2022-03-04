@@ -4,10 +4,9 @@ import ContactItem from "./ContactItem";
 
 interface Props {
   contactInfo: ContactPoint[];
-  /*  setViewedPage: React.Dispatch<SetStateAction<string>> */
 }
 
-const Contact: React.FC<Props> = ({ contactInfo /* , setViewedPage */ }) => {
+const Contact: React.FC<Props> = ({ contactInfo }) => {
   return (
     <>
       <div style={{ display: "flex", flex: 1 }} />

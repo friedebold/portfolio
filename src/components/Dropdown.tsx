@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {
   title: string;
-  content: JSX.Element;
+  content: JSX.Element | (() => JSX.Element);
   openDropdown: string;
   setOpenDropdown: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -39,7 +39,7 @@ const Dropdown: React.FC<Props> = ({
           paddingBottom: isOpen ? "30px" : "0px",
         }}
       >
-        {content}
+        {typeof content === "function" ? content() : content}
       </div>
     </>
   );
