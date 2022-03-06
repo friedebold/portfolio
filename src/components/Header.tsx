@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
-  subTitle?: string;
 }
 
-const Header: React.FC<Props> = ({ title, subTitle }) => {
+const Header: React.FC<Props> = ({ title }) => {
   return (
     <header className="header">
-      <h1>{title}</h1>
-      {subTitle && <h2>{subTitle}</h2>}
+      <Link to="/" style={{ backgroundColor: "red" }}>
+        <h1>Daniel Friedebold</h1>
+      </Link>
+      <h2>{title}</h2>
     </header>
   );
 };

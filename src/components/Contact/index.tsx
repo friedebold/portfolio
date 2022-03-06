@@ -12,7 +12,7 @@ const Contact: React.FC<Props> = ({ contactInfo }) => {
       <div style={{ display: "flex", flex: 1 }} />
       <ul className="list" style={{ transform: "translateY(12px)" }}>
         {contactInfo
-          .sort((a, b) => a.priority - b.priority)
+          .sort((a, b) => b.priority - a.priority)
           .map((contact, index) => {
             return <ContactItem {...{ contact }} key={index} />;
           })}

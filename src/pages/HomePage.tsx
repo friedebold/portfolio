@@ -9,49 +9,34 @@ import { Spacer } from "../components/Spacer";
 import { margin } from "../constants";
 
 interface Props {
-  navigation: any;
   profileData: Profile;
 }
 
-const HomePage: React.FC<Props> = ({ navigation, profileData }) => {
+const HomePage: React.FC<Props> = ({ profileData }) => {
   const {
     maschineLangs,
     humanLangs,
-    interests,
     mission,
     contactInfo,
     specialities,
+    interests,
   } = profileData;
 
   const [openDropdown, setOpenDropdown] = useState<string>("");
 
-  const sortedHumanLangs = humanLangs
-    .sort((a, b) => b.priority - a.priority)
-    .map((e) => e.lang);
-
-  const sortedMaschineLangs = maschineLangs
-    .sort((a, b) => b.priority - a.priority)
-    .map((e) => e.lang);
-
-  const sortedSpecialities = specialities.map((e) => e.type);
-
-  const sortedInterests = interests
-    .sort((a, b) => a.priority - b.priority)
-    .map((e) => e.type);
-
   return (
     <>
-      <Header title={"Daniel Friedebold"} subTitle={`Mission: ${mission[0]}`} />
+      <Header title={`Mission: ${mission[0]}`} />
       <Spacer height={margin * 2} />
       <Dropdown
         title="🗣 Communication Ability"
         content={
           <>
             <h3>with humans</h3>
-            <List listData={sortedHumanLangs} />
+            <List listData={humanLangs} />
             <Spacer height={margin / 2} />
             <h3>with maschines</h3>
-            <List listData={sortedMaschineLangs} />
+            <List listData={maschineLangs} />
           </>
         }
         {...{ openDropdown }}
@@ -60,7 +45,7 @@ const HomePage: React.FC<Props> = ({ navigation, profileData }) => {
       <Spacer height={margin} />
       <Dropdown
         title="💪🏽 Specialities"
-        content={<List listData={sortedSpecialities} />}
+        content={<List listData={specialities} />}
         {...{ openDropdown }}
         {...{ setOpenDropdown }}
       />
@@ -79,7 +64,7 @@ const HomePage: React.FC<Props> = ({ navigation, profileData }) => {
       <Spacer height={margin} />
       <Dropdown
         title="💭 Interests"
-        content={<List listData={sortedInterests} />}
+        content={<List listData={interests} />}
         {...{ openDropdown }}
         {...{ setOpenDropdown }}
       />

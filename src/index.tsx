@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import DataWrapper from "./DataWrapper";
 import "./index.css";
-import FormalEducation from "./pages/FormalEducation";
+import {
+  default as ExperiencePage,
+  default as FormalEducation
+} from "./pages/ExperiencePage";
 import HomePage from "./pages/HomePage";
 
 ReactDOM.render(
@@ -18,17 +21,21 @@ ReactDOM.render(
                   <Route
                     path="/projects"
                     exact
-                    component={() => <h2>Coming soon...</h2>}
+                    component={() => (
+                      <ExperiencePage
+                        title="🧪 Projects"
+                        data={profileData.projects}
+                      />
+                    )}
                   />
                   <Route
                     path="/workExperience"
                     exact
                     component={() => (
-                      <h2>Coming soon...</h2>
-                      /*   <FormalEducation
+                      <ExperiencePage
                         title="👨🏼‍💻 Work Experience"
                         data={profileData.workExperience}
-                      /> */
+                      />
                     )}
                   />
                   <Route
@@ -43,9 +50,7 @@ ReactDOM.render(
                   />
                   <Route
                     path="/"
-                    component={(props: any) => (
-                      <HomePage {...{ profileData }} navigation={props} />
-                    )}
+                    component={() => <HomePage {...{ profileData }} />}
                   />
                 </Switch>
               </BrowserRouter>

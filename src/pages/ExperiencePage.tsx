@@ -10,35 +10,37 @@ interface Props {
   data: Experience[];
 }
 
-const FormalEducation: React.FC<Props> = ({ title, data }) => {
+const ExperiencePage: React.FC<Props> = ({ title, data }) => {
   const [openDropdown, setOpenDropdown] = useState<string>("");
 
   const sortedData = data.sort((a, b) => {
-    if (a.start.year > b.start.year) return -1;
-    else if (a.start.month > b.start.month) return -1;
-    else return 0;
+    if (a.start.year === b.start.year) {
+      if (a.start.month > b.start.month) return -1;
+      else return 0;
+    } else {
+      return b.start.year - a.start.year;
+    }
   });
+
   return (
     <>
       <Header title={title} />
       <Spacer height={margin * 2} />
       {sortedData.map((experience, idx) => {
         const isLast = idx + 1 === sortedData.length;
+        const { company, desc, end, start, location, position } = experience;
         return (
           <div key={idx}>
             <Dropdown
-              title={experience.position}
+              title={company ? company : position}
               content={() => {
-                const { company, desc, end, start, location } = experience;
                 const time = `${shortMonthNames[start.month.toString()]} ${
                   start.year
                 } -
                 ${shortMonthNames[end.month.toString()]} ${end.year}`;
                 return (
                   <>
-                    <h3>
-                      {company} ({time})
-                    </h3>
+                    <h3>{company ? `${position} (${time})` : time}</h3>
                     <p>{location}</p>
                     <Spacer height={margin} />
                     {desc.map((descElement, idx) => {
@@ -58,4 +60,4 @@ const FormalEducation: React.FC<Props> = ({ title, data }) => {
   );
 };
 
-export default FormalEducation;
+export default ExperiencePage;
