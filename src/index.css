@@ -68,12 +68,6 @@ i {
   color: white;
 }
 
-p.black,
-h2.black,
-h3.black {
-  color: black;
-}
-
 button {
   border: none;
   background-color: transparent;
@@ -126,57 +120,6 @@ li {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-/* .gradient-container {
-  width: 100vw;
-  height: 100vmin;
-  overflow: hidden;
-  position: absolute;
-  z-index: -5;
-  left: 0px;
-  top: 0;
-}
-
-.gradient-background {
-  width: 200vw;
-  height: 200vmin;
-  opacity: 0.5;
-  background: radial-gradient(closest-side, var(--blue), var(--dark-grey));
-  transform: translate(0%, -50%);
-} */
-
-.seperator-container {
-  width: 100vw;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.seperator-bar {
-  position: relative;
-  align-self: flex-start;
-  opacity: 0.3;
-  display: flex;
-  animation-name: k1;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: backwards;
-  margin: calc(var(--margin) * 3) 0px calc(var(--margin) * 3) 0px;
-}
-
-.seperator-txt {
-  height: auto;
-  width: auto;
-  white-space: nowrap;
-  margin: 0px 10px 0px 10px;
-}
-
-@keyframes k1 {
-  to {
-    transform: translateX(-100%);
-  }
 }
 
 @media screen and (max-width: 1024px) {
