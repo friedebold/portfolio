@@ -43,13 +43,6 @@ const HomePage: React.FC<Props> = ({ profileData }) => {
         {...{ setOpenDropdown }}
       />
       <Spacer height={margin} />
-      <Dropdown
-        title="💪🏽 Specialities"
-        content={<List listData={specialities} />}
-        {...{ openDropdown }}
-        {...{ setOpenDropdown }}
-      />
-      <Spacer height={margin} />
       <Link to="/formalEducation">
         <h2 style={{ paddingLeft: margin + 5 }}>📚 Formal Education</h2>
       </Link>
@@ -61,6 +54,13 @@ const HomePage: React.FC<Props> = ({ profileData }) => {
       <Link to="/projects">
         <h2 style={{ paddingLeft: margin + 5 }}>🧪 Projects</h2>
       </Link>
+      <Spacer height={margin} />
+      <Dropdown
+        title="💪🏽 Specialities"
+        content={<List listData={specialities} />}
+        {...{ openDropdown }}
+        {...{ setOpenDropdown }}
+      />
       <Spacer height={margin} />
       <Dropdown
         title="💭 Interests"
