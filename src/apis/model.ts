@@ -23,6 +23,7 @@ export interface Experience {
   position: string;
   desc: string[];
   location: string;
+  link?: string;
 }
 
 export interface ContactPoint {

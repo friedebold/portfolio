@@ -28,7 +28,8 @@ const ExperiencePage: React.FC<Props> = ({ title, data }) => {
       <Spacer height={margin * 2} />
       {sortedData.map((experience, idx) => {
         const isLast = idx + 1 === sortedData.length;
-        const { company, desc, end, start, location, position } = experience;
+        const { company, desc, end, start, location, position, link } =
+          experience;
         return (
           <div key={idx}>
             <Dropdown
@@ -46,6 +47,18 @@ const ExperiencePage: React.FC<Props> = ({ title, data }) => {
                     {desc.map((descElement, idx) => {
                       return <p key={idx}>{descElement}</p>;
                     })}
+                    <Spacer height={margin} />
+                    {link && (
+                      <a
+                        style={{ textDecoration: "none" }}
+                        target="none"
+                        href={link}
+                      >
+                        <li style={{ opacity: 0.5 }}>
+                          <p>learn more...</p>
+                        </li>
+                      </a>
+                    )}
                   </>
                 );
               }}
