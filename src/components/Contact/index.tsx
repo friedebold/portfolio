@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { ContactPoint } from "../../apis/model";
 import ContactItem from "./ContactItem";
 
@@ -18,7 +17,7 @@ const Contact: React.FC<Props> = ({ contactInfo }) => {
       }}
     >
       <div style={{ display: "flex", flex: 1 }} />
-      <Link
+     {/*  <Link
         to="/Daniel_Friedebold.pdf"
         target="_blank"
         download
@@ -27,7 +26,7 @@ const Contact: React.FC<Props> = ({ contactInfo }) => {
         <div className="list-item">
           <p>↓ Download CV</p>
         </div>
-      </Link>
+      </Link> */}
       <ul className="list" style={{}}>
         {contactInfo
           .sort((a, b) => b.priority - a.priority)
