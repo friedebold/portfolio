@@ -17,16 +17,6 @@ const Contact: React.FC<Props> = ({ contactInfo }) => {
       }}
     >
       <div style={{ display: "flex", flex: 1 }} />
-     {/*  <Link
-        to="/Daniel_Friedebold.pdf"
-        target="_blank"
-        download
-        style={{ alignSelf: "flex-start" }}
-      >
-        <div className="list-item">
-          <p>↓ Download CV</p>
-        </div>
-      </Link> */}
       <ul className="list" style={{}}>
         {contactInfo
           .sort((a, b) => b.priority - a.priority)
