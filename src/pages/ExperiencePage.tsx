@@ -35,16 +35,19 @@ const ExperiencePage: React.FC<Props> = ({ title, data }) => {
             <Dropdown
               title={company ? company : position}
               content={() => {
-                const time = `${shortMonthNames[start.month.toString()]} ${
-                  start.year
-                } -
-                ${shortMonthNames[end.month.toString()]} ${end.year}`;
+                const time = end
+                  ? `${shortMonthNames[start.month.toString()]} ${
+                      start.year
+                    } - ${shortMonthNames[end.month.toString()]} ${end.year}`
+                  : `${shortMonthNames[start.month.toString()]} ${
+                    start.year
+                  } - now`;
                 return (
                   <>
                     <h3>{company ? `${position} (${time})` : time}</h3>
                     <p>{location}</p>
                     <Spacer height={margin} />
-                    {desc.map((descElement, idx) => {
+                    {desc && desc.map((descElement, idx) => {
                       return <p key={idx}>{descElement}</p>;
                     })}
                     <Spacer height={margin} />

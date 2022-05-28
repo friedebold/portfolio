@@ -38,7 +38,7 @@ export const shortMonthNames: { [key: string]: string } = {
   2: "Feb",
   3: "Mar",
   4: "Apr",
-  5: "Ma",
+  5: "Mar",
   6: "Jun",
   7: "Jul",
   8: "Aug",

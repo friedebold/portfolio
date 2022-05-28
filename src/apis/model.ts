@@ -18,10 +18,10 @@ export interface RankedItem {
 export interface Experience {
   id?: number;
   start: Time;
-  end: Time;
+  end?: Time;
   company?: string;
   position: string;
-  desc: string[];
+  desc?: string[];
   location: string;
   link?: string;
 }
