@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import DataWrapper from "./DataWrapper";
 import "./index.css";
+import Business from "./pages/Business";
 import {
   default as ExperiencePage,
   default as FormalEducation
@@ -47,6 +48,10 @@ ReactDOM.render(
                         data={profileData.formalEducation}
                       />
                     )}
+                  />
+                  <Route
+                    path="/987c3ab4-9a05-408e-b87b-8e1bd8c0bc50"
+                    component={() => <Business />}
                   />
                   <Route
                     path="/"
