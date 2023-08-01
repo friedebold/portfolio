@@ -75,3 +75,20 @@ li {
 li:hover {
   background: rgb(72, 72, 72);
 }
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  ul {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
