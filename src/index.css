@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -33,7 +35,7 @@ h1,
 h2,
 h3,
 p {
-  color: white;
+  color: rgb(50, 50, 50);
   display: inline;
   line-height: 1.6;
 }
@@ -65,7 +67,7 @@ li {
   border-radius: var(--border-radius);
   padding: 3px 10px;
   margin-right: 10px;
-  border: 1px solid rgb(72, 72, 72);
+  border: 1px solid gainsboro;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   flex-direction: row;
@@ -73,7 +75,7 @@ li {
 }
 
 li:hover {
-  background: rgb(72, 72, 72);
+  background: gainsboro;
 }
 
 @media only screen and (max-width: 500px) {

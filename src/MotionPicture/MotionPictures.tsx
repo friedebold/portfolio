@@ -4,7 +4,7 @@ import { useState } from "react";
 import { lightning, plane } from "./paths";
 import { useFlubber } from "./use-flubber";
 
-const paths = [ plane, lightning, plane];
+const paths = [plane, lightning, plane];
 
 export default function App() {
   const [pathIndex, setPathIndex] = useState(0);
@@ -34,13 +34,12 @@ export default function App() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        /* background: "green" */
       }}
     >
       <svg width="68" height="68" /* style={{background: 'red'}} */>
         <g transform="translate(10 10) scale(2 2)">
           <motion.path
-            fill={"#1a1c21"}
+            fill={"#323232"}
             d={path}
             color={"red"}
             stroke="white"

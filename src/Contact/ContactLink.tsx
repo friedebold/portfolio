@@ -12,7 +12,7 @@ const ContactLink: React.FC<Props> = ({ contact }) => {
         <p>{contact.title}</p>
       </a>
       <div style={{ width: 10 }} />
-      <FiExternalLink color="white" opacity={0.5} size="14" />
+      <FiExternalLink color="#323232" opacity={0.5} size="14" />
     </li>
   );
 };
