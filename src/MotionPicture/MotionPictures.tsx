@@ -39,11 +39,11 @@ export default function App() {
       <svg width="68" height="68" /* style={{background: 'red'}} */>
         <g transform="translate(10 10) scale(2 2)">
           <motion.path
-            fill={"#323232"}
+            fill={"transparent"}
             d={path}
             color={"red"}
-            stroke="white"
-            stroke-width="0.2"
+            stroke="#323232"
+            strokeWidth={0.5}
           />
         </g>
       </svg>
