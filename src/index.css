@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
-
 * {
   box-sizing: border-box;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   margin: 0;
   padding: 0;
 }
@@ -12,30 +11,62 @@
   --border-radius: 10px;
 }
 
-header {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-}
-
 body {
-  margin: auto;
-  max-width: 1000px;
-  min-height: 100vh;
-  padding: var(--margin);
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+.page {
+  display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#name {
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  text-align: right;
+}
+
+#cloud-img {
+  max-width: 80%;
+  max-height: 30%;
+  margin: auto;
+  user-select: none;
+}
+
+.earth-img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 0px;
+  left: 50vw;
+  /*  bottom: 0px;
+  left: 50vw; */
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
-h2,
-h3,
 p {
-  color: #323232;
-  display: inline;
-  line-height: 1.6;
+  color: #e9e2d2;
+  line-height: 1.2;
 }
 
 a {
@@ -43,52 +74,12 @@ a {
 }
 
 h1 {
-  font-size: 40px;
-}
-
-h2 {
   font-size: 20px;
+  font-weight: 600;
 }
 
-p {
-  font-size: 14px;
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-li {
-  display: flex;
-  list-style-type: none;
-  border-radius: var(--border-radius);
-  padding: 3px 10px;
-  margin-right: 10px;
-  border: 1px solid gainsboro;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  flex-direction: row;
-  align-items: center;
-}
-
-li:hover {
-  background: gainsboro;
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400) {
   h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  ul {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-  }
-  li {
-    margin-bottom: 10px;
+    font-size: 20px;
   }
 }

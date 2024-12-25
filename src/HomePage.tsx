@@ -1,21 +1,17 @@
 import React from "react";
-import Contact from "./Contact";
-import MotionPictures from "./MotionPicture/MotionPictures";
+import Cloud from "./assets/cloud.png";
 
 interface Props {}
 
 const HomePage: React.FC<Props> = () => {
   return (
-    <>
-      <header>
-        <h1>Daniel Friedebold</h1>
-        <h2>Maximizing Future Excitement</h2>
-      </header>
-      <div style={{ height: 20 }} />
-      <Contact />
-      <div style={{ height: 20 }} />
-      <MotionPictures />
-    </>
+    <div className="page">
+      <div id="name">
+        <h1>DANIEL</h1>
+        <h1>FRIEDEBOLD</h1>
+      </div>
+      <img id="cloud-img" src={Cloud} />
+    </div>
   );
 };
 export default HomePage;
