@@ -26,8 +26,8 @@ const HomePage: React.FC<Props> = () => {
     {
       title: "V1",
       status: "upcoming",
-      distance: "15 km",
-      duration: "20 min",
+      distance: "5 km",
+      duration: "10 min",
       maxSpeed: "50 km/h",
       payload: "0 kg",
     },
@@ -35,7 +35,7 @@ const HomePage: React.FC<Props> = () => {
   return (
     <>
       <div id="name">
-      <h1>DANIEL FRIEDEBOLD</h1>
+        <h1>DANIEL FRIEDEBOLD</h1>
       </div>
       <div className="page">
         <img id="cloud-img" src={Cloud} />
