@@ -4,11 +4,15 @@
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
+  pointer-events: none;
+}
+
+html {
+  background-color: black;
 }
 
 :root {
   --margin: 30px;
-  --border-radius: 10px;
 }
 
 body {
@@ -16,12 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: black;
-  overflow: hidden;
-}
-
-img {
-  user-select: none;
-  pointer-events: none;
+  height: auto;
 }
 
 .page {
@@ -30,38 +29,93 @@ img {
   width: 100vw;
   height: 100vh;
   background-color: black;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 #name {
-  position: absolute;
-  top: var(--margin);
-  left: var(--margin);
-  text-align: start;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  padding: 30px;
+  top: 0px;
 }
 
 #cloud-img {
-  max-width: 80%;
-  max-height: 30%;
+  max-width: 80hw;
+  max-height: 30vh;
   margin: auto;
   user-select: none;
 }
 
-.earth-img {
+.container {
+  background-color: #0a0a0a;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 40px;
+}
+
+.container-header {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-graph {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.container-metrics {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.tag {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.tag.achieved {
+  background-color: #59ab4c;
+  color: black;
+}
+
+.tag.upcoming {
+  background-color: #282828;
+  color: #e9e2d2;
+}
+
+.metric {
+  flex: 1;
+}
+
+.metrics-duration {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  bottom: 0px;
-  left: 50vw;
+  top: 48px;
 }
 
 h1,
-p {
+h2,
+h3,
+h4 {
   color: #e9e2d2;
   line-height: 1.2;
-}
-
-a {
-  text-decoration: none;
 }
 
 h1 {
@@ -69,8 +123,21 @@ h1 {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 400) {
-  h1 {
-    font-size: 20px;
-  }
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h4 {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
 }
