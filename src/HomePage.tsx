@@ -4,7 +4,7 @@ import Container from "./Container";
 
 export interface Version {
   title: string;
-  status: "achieved" | "upcoming";
+  status: "latest" | "upcoming";
   distance: string;
   duration: string;
   maxSpeed: string;
@@ -17,7 +17,7 @@ const HomePage: React.FC<Props> = () => {
   const versions: Version[] = [
     {
       title: "V0",
-      status: "achieved",
+      status: "latest",
       distance: "200 m",
       duration: "15 s",
       maxSpeed: "50 km/h",
